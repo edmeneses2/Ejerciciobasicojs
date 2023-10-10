@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Adivina el numero</title>
+        <h1>numero</h1>
+        <script>
+            // Genera un número aleatorio entre 1 y 100 (incluyendo 1 pero excluyendo 101)
+        var numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+        var adivinanza = false
+
+        //alert(numeroAleatorio); // Muestra el número aleatorio en la consola
+        
+        for (let i = 1; i <= 4; i++) {
+            var adivina = parseInt(prompt("ADIVINA EL NUMERO tienes 4 intentos iniciemos. \nintento "+i+"\nIngresa un numero" ))
+            if (adivina==numeroAleatorio){
+                alert("Adivinaste, el numero ingresado fue: "+adivina+ " el numero oculto era : "+numeroAleatorio)
+                adivinanza = true
+                break;
+            }else if(adivina>numeroAleatorio){
+                alert("Ingresaste un numero mayor")
+            }else if(adivina<numeroAleatorio){
+                alert("Ingresaste un numero menor")
+            }
+        } 
+            if (!adivinanza) {
+            alert("Perdiste. El número era " + numeroAleatorio);
+}
+       
+        </script>
+    </head>
+</html>

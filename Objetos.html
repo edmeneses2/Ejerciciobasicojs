@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8/">
+        <TITle>Objeto</TITle>
+        <h1>Objetos</h1>
+        <script>
+    function moto(marca,modelo, color){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+    }  
+
+    var motos= []
+   
+    for (let i = 0; i < 3; i++) {
+    var marca = prompt ("Ingrese la marca de la motocicleta: ")
+    var modelo = prompt ("Ingrese el modelo de la motocicleta: ")
+    var color = prompt ("Ingrese el color de la motocicleta: ")
+
+    var nuevaMoto = new moto(marca,modelo,color)
+    motos.push(nuevaMoto);
+    }
+    var mensaje = "Datos de las motocicletas:\n";
+
+    for (let i = 0; i < motos.length; i++) {
+    mensaje += motos[i].marca + " " + motos[i].modelo + " " + motos[i].color + "\n";
+    }
+
+    alert(mensaje);      
+</script>
+</head>
+<body>       
+</body>
+</html>
